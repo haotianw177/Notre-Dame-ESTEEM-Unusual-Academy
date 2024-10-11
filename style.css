@@ -1,0 +1,182 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation Bar Styles */
+.header {
+  background-color: white;
+  box-shadow: #333;
+  padding: 1em 0;
+  border: 1px solid #333;
+  font-size: large;
+}
+
+.header ul {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+}
+
+.header li {
+  margin: 0 1.5em;
+}
+
+.header a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header a:hover,
+.header a.active {
+  text-decoration: underline;
+}
+
+.applyButtonHeader {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove border */
+    color: white; /* White text */
+    border-radius: 10px;
+    width: 100px;
+}
+
+.applyButtonHeader:hover {
+    background-color: white; /* White background on hover */
+    color: #4CAF50; /* Green text on hover */
+}
+
+/* Main Container Styles */
+.applicationProcessContainer {
+    text-align: left;
+    margin: 30px auto 50px auto;
+    width: 70%;
+  /* text-align: center; */
+}
+
+.applicationProcessContainer h1 {
+  /* font-size: 2.5em; */
+}
+
+.applicationProcessContainer p {
+  font-size: 1.5em;
+  color: #666;
+}
+
+/* Styles for the info sections */
+.infoSection {
+  display: flex;
+  width: 100%;
+  margin: 2em 0;
+  white-space: pre-wrap;
+
+}
+
+.infoSection .left {
+  width: 30%;
+  padding: 1em;
+  background-color: #f0f0f0;
+}
+
+.infoSection .right {
+  width: 70%;
+  padding: 1em;
+  background-color: #e0e0e0;
+}
+
+.infoSection h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.infoSection p {
+  font-size: 1em;
+  color: #333;
+}
+
+.applicationFormContainer{
+    text-align: left;
+    margin: 30px auto 50px auto;
+    width: 100%;
+}
+
+.applicationButton {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  .applicationButton:hover {
+    background-color: #555;
+  }
+
+  .applicationProcessButton {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+  }
+
+
+
+/* Footer Styles */
+.footerComponent {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerContent {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footerComponent p {
+    margin-bottom: 0.5em;
+}
+
+.footerNav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5em;
+}
+
+.footerNav a:hover {
+    text-decoration: underline;
+}
+
+.faqsContainer{
+    text-align: left;
+    margin: 30px auto 50px auto;
+    width: 70%;
+
+}
+
+/* Add this to your existing CSS file */
+.faqsContainer p {
+    white-space: pre-wrap;
+}
+
+
+.faqsContainer li{
+    list-style-type: none
+}
