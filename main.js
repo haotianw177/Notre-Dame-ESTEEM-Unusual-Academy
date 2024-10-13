@@ -1,5 +1,3 @@
-// Define the 'home' component
-// Update the 'home' component
 Vue.component('home', {
   data() {
     return {

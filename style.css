@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #FBF9F5;
+  margin-top: 100px;
+
+}
+
+
+
 @font-face {
   font-family: 'RecifeText';
   src: url('fonts/RecifeText_Light.ttf') format('truetype');
@@ -43,11 +51,14 @@ li{
 
 /* Navigation Bar Styles */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: white;
-  box-shadow: #333;
+  z-index: 1000; /* Ensure it stays above other elements */
   padding: 1em 0;
-  /* border: 1px solid #333; */
-  font-size: large;
+  /* Retain other styles as needed */
 }
 
 .header ul {
