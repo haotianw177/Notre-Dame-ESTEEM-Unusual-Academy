@@ -44,10 +44,28 @@ Vue.component('home', {
       The Notre Dame ESTEEM Unusual Academy 2024-25 is a hands-on seminar series designed to help entrepreneurial teams build successful technology-oriented startups. Led by John Vrionis, a veteran venture capitalist, and Germán Estrada, Assistant Teaching Professor & Director of ESTEEM, this program will offer a learning-by-doing approach, combining real-world case studies, structured exercises, and expert mentorship. This inaugural seminar will guide participants from idea development to product-market fit, fundraising, and leadership.
     </h2>
     <br>
-    <img src= "images/esteem.jpg" class="ideaCenterImage" width = "100%">
+
     <button class="applyButton" >Apply Now</button>
     <br><br>
 
+    <h1>Program Overview</h1>
+    <p>The Unusual Academy consists of three workshops spaced throughout the academic year. Each workshop will focus on a specific aspect of building a successful startup, offering practical learning, mentorship, and team-based exercises. Participants will walk away with the skills necessary to identify customers, build products, and raise funds for their startups. </p>
+    <br>
+
+    <div class="programOverview">
+    <div
+      class="programOverviewBoxes"
+      v-for="(box, index) in boxes"
+      :key="index"
+    >
+      <h2>{{ box.title }}</h2>
+      <p class="keyHeading">{{ box.key }}</p>
+      <ul>
+        <li v-for="(point, idx) in box.points" :key="idx">{{ point }}</li>
+      </ul>
+    </div>
+    </div>
+    <br>
     <h1>Learning Facilitators</h1>
     <div class="learningFacilitators">
       <div class="mainBlock">
@@ -88,20 +106,6 @@ Vue.component('home', {
     <br><br>
 
   
-    <!-- Add the boxes here -->
-    <div class="programOverview">
-      <div
-        class="programOverviewBoxes"
-        v-for="(box, index) in boxes"
-        :key="index"
-      >
-        <h2>{{ box.title }}</h2>
-        <p class="keyHeading">{{ box.key }}</p>
-        <ul>
-          <li v-for="(point, idx) in box.points" :key="idx">{{ point }}</li>
-        </ul>
-      </div>
-    </div>
   </div>
   
     `
