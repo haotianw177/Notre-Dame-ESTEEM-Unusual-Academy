@@ -1,60 +1,165 @@
 // Define the 'home' component
 // Update the 'home' component
 Vue.component('home', {
-    data() {
-      return {
-        sections: [
-          {
-            leftTitle: 'Section 1 Left',
-            leftContent: 'Content for the left side of section 1.',
-            rightTitle: 'Program Overview',
-            rightContent: 'Content for the right side of section 1.'
-          },
-          {
-            leftTitle: 'Section 2 Left',
-            leftContent: 'Content for the left side of section 2.',
-            rightTitle: 'Section 2 Right',
-            rightContent: 'Content for the right side of section 2.'
-          },
-          {
-            leftTitle: 'Section 3 Left',
-            leftContent: 'Content for the left side of section 3.',
-            rightTitle: 'Section 3 Right',
-            rightContent: 'Content for the right side of section 3.'
-          },
-          {
-            leftTitle: 'Section 4 Left',
-            leftContent: 'Content for the left side of section 4.',
-            rightTitle: 'Section 4 Right',
-            rightContent: 'Content for the right side of section 4.'
-          }
-        ]
-      };
-    },
+  data() {
+    return {
+      boxes: [
+        {
+          title: 'Seminar 1: Customer Discovery',
+          key: 'November 15, 2024, Notre Dame Campus, 20-30 hours',
+          points: [
+            'Building Your Ideal Customer Profile (ICP): Learn how to define and target the right customers for your product',
+            'Messaging and Positioning: Develop effective messaging that resonates with your target audience',
+            'Customer Outreach: Understand best practices for reaching potential customers efficiently',
+            'Real-World Case Studies: AppDynamics, Harness, and Traceable will serve as examples of successful startups’ customer discovery processes'
+          ]
+        },
+        {
+          title: 'Seminar 2: Design Partners and Fundraising',
+          key: 'February/March 2025 (During Winter/Spring Break), Silicon Valley, 20-30 hours',
+          points: [
+            'Engaging Design Partners: Learn how to collaborate with early adopters to refine and validate your product',
+            'Fundraising Basics: Gain insights into venture capital, including fundraising strategies, pitch creation, and investor relations',
+            'History of Venture Capital: Understand the historical dynamics of the venture capital industry and how they impact founders'
+          ]
+        },
+        {
+          title: 'Seminar 3: Pitching, Hiring, and Leadership with Integrity',
+          key: 'April/May 2025, Notre Dame Campus, 2 hours',
+          points: [
+            'Pitching Your Startup: Teams will present their investor pitch and receive feedback from venture experts',
+            'Hiring and Team Building: Learn how to hire and manage the right team for your startup',
+            'Leadership with Integrity: Explore leadership challenges while maintaining ethical integrity and strong team dynamics'
+          ]
+        }
+      ]
+    };
+  },
     template: `
-      <div>
-        <info-section
-          v-for="(section, index) in sections"
-          :key="index"
-          :section="section"
-        ></info-section>
+    <div class="homeContainer">
+    <br>
+    <h1>Notre Dame ESTEEM Unusual Academy</h1>
+    <br>
+    <h2>
+      The Notre Dame ESTEEM Unusual Academy 2024-25 is a hands-on seminar series designed to help entrepreneurial teams build successful technology-oriented startups. Led by John Vrionis, a veteran venture capitalist, and Germán Estrada, Assistant Teaching Professor & Director of ESTEEM, this program will offer a learning-by-doing approach, combining real-world case studies, structured exercises, and expert mentorship. This inaugural seminar will guide participants from idea development to product-market fit, fundraising, and leadership.
+    </h2>
+    <br>
+    <img src= "images/esteem.jpg" class="ideaCenterImage" width = "100%">
+    <button class="applyButton" >Apply Now</button>
+    <br><br>
+
+    <h1>Learning Facilitators</h1>
+    <div class="learningFacilitators">
+      <div class="mainBlock">
+        <h2>John Vrionis</h2>
+        <img src= "images/john.jpg" class="facultyImage" width = "100%">
+        <p>John Vrionis is a Co-Founder and Partner at Unusual Ventures. A venture capitalist since 2006, he’s been an early investor in over a dozen billion dollar plus companies, including: Affirmed Networks, AppDynamics, Arctic Wolf Networks, Carta, Harness, Liftoff.io, Mulesoft, Nicira, Nimble Storage, Sourcegraph, and DataStax. Originally from Georgia, John attended Harvard where he studied economics, applied math and played soccer. His drive to learn pushed him to earn his master’s degree in computer science from the University of Chicago. Inspired by successful entrepreneurs, John arrived in Silicon Valley in 2002 and worked in product management before completing his MBA at Stanford. John looks to work with entrepreneurs who have the hunger to learn and the drive to overcome difficult obstacles. In John’s words, “I believe that you learn by overcoming adversity. For me, whether it was sports, school, or in my personal and professional life, that’s been the truth. I gravitate to people who have an immense drive and the humility to keep learning.” Prior to founding Unusual Ventures, John was a General Partner at Lightspeed Venture Partners.</p>
       </div>
+      <div class="secondaryBlock">
+        <h2>Germán Estrada Mendoza</h2>
+        <img src= "images/german.jpg" class="facultyImage" width = "100%">
+        <p>Germán Estrada Mendoza is an Assistant Teaching Professor and Director of the ESTEEM Graduate Program at the University of Notre Dame. With over a decade of experience, he specializes in Business Valuation, Mergers & Acquisitions, and Entrepreneurship. Before joining Notre Dame, Germán was a part-time professor at Pontificia Universidad Católica del Perú (PUCP) and has taught corporate finance since 2010.
+        In 2017, Germán co-founded 90pct, a tech startup providing financial tools for small businesses in Latin America. Its flagship product, TinkuApp, simplified accounting for entrepreneurs, replacing complex spreadsheets with a streamlined web application. Though the company ceased operations in 2019, it made a significant impact on small business financial management.
+        Germán holds a Master of Science in Engineering, Science, and Technology Entrepreneurship from the University of Notre Dame and a Master in Finance from Universidad Peruana de Ciencias Aplicadas (UPC).
+        </p>
+      </div>
+    </div>
+    <br>
+    <h1>Who Should Apply?</h1>
+    <br>
+    <h2>
+      We are seeking high-potential entrepreneurial teams of 2-5 members who are ready to take their startup ideas to the next level. 
+      <br><br>
+      At least one team member must be a software engineer or builder. This seminar is open to students in the ESTEEM program, as well as non-ESTEEM students from other academic disciplines.
+    </h2>
+    <br><br>
+
+    <h1>Funding Opportunity</h1>
+    <br>
+    <h2>
+      Teams that apply with a specific startup idea are eligible to receive up to $25,000 in non-dilutive funding to help accelerate their growth.
+      <br><br>
+      Next Steps: Once applications are reviewed, selected teams will be invited for interviews. Final decisions will be made by October 31, 2024. The first workshop will commence on November 15, 2024, on the Notre Dame campus.
+      <br><br>
+      For more information, please contact Germán Estrada, Assistant Teaching Professor & Director @ ESTEEM, at german.estrada@nd.edu.
+      <br><br>
+      We look forward to helping you turn your startup ideas into reality!
+    </h2>
+    <br><br>
+
+  
+    <!-- Add the boxes here -->
+    <div class="programOverview">
+      <div
+        class="programOverviewBoxes"
+        v-for="(box, index) in boxes"
+        :key="index"
+      >
+        <h2>{{ box.title }}</h2>
+        <p class="keyHeading">{{ box.key }}</p>
+        <ul>
+          <li v-for="(point, idx) in box.points" :key="idx">{{ point }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
     `
   });
   
 
 // Define the 'applicationProcess' component
 Vue.component('applicationProcess', {
+  data() {
+    return {
+      boxes: [
+        {
+          title: 'Seminar 1: Customer Discovery',
+          key: 'November 15/2024, Notre Dame Campus, 20-30 hours',
+          points: ['Building Your Ideal Customer Profile (ICP): Learn how to define and target the right customers for your product', 'Messaging and Positioning: Develop effective messaging that resonates with your target audience  ', 'Customer Outreach: Understand best practices for reaching potential customers efficiently', 'Real-World Case Studies: AppDynamics, Harness, and Traceable will serve as examples of successful startups’ customer discovery processes']
+        },
+        {
+          title: 'Seminar 2: Design Partners and Fundraising',
+          key: 'February/March 2025 (During Winter/Spring Break), Silicon Valley, 20-30 hours',
+          points: ['Engaging Design Partners: Learn how to collaborate with early adopters to refine and validate your product', 'Fundraising Basics: Gain insights into venture capital, including fundraising strategies, pitch creation, and investor relations', 'History of Venture Capital: Understand the historical dynamics of the venture capital industry and how they impact founders']
+        },
+        {
+          title: 'Seminar 3: Pitching, Hiring, and Leadership with Integrity',
+          key: 'April/May 2025, Notre Dame Campus, 2 hours',
+          points: ['Pitching Your Startup: Teams will present their investor pitch and receive feedback from venture experts', 'Hiring and Team Building: Learn how to hire and manage the right team for your startup', 'Leadership with Integrity: Explore leadership challenges while maintaining ethical integrity and strong team dynamics']
+        }
+      ]
+    };
+  },
     template: `
-        <div class="applicationProcessContainer">
-            <h1>Application Process</h1>
-            <div class="applicationFormContainer">
-            <p>Once applications are reviewed, selected teams will be invited for interviews. Final decisions will be made by November 8, 2024. The first workshop will commence on November 15, 2024, on the Notre Dame campus.
-            For more information, please contact Germán Estrada, Assistant Teaching Professor & Director @ ESTEEM, at german.estrada@nd.edu.</p>
-            <button class = "applicationProcessButton" onclick="window.location.href='https://frmtb6m2df5.typeform.com/to/d6rSgwRs?typeform-source=esteem-unusualacademy.carrd.co'"><h1>Apply Now</h1></button>
-
+    <div class="applicationProcessContainer">
+    <h1>Application Process</h1>
+    <div class="applicationFormContainer">
+      <p>
+        Once applications are reviewed, selected teams will be invited for interviews. Final decisions will be made by November 8, 2024. The first workshop will commence on November 15, 2024, on the Notre Dame campus.
+        For more information, please contact Germán Estrada, Assistant Teaching Professor & Director @ ESTEEM, at german.estrada@nd.edu.
+        <br>
+        The Unusual Academy consists of three workshops spaced throughout the academic year. Each workshop will focus on a specific aspect of building a successful startup, offering practical learning, mentorship, and team-based exercises. Participants will walk away with the skills necessary to identify customers, build products, and raise funds for their startups.
+      </p>
+      <button class="applicationProcessButton" onclick="window.location.href='https://frmtb6m2df5.typeform.com/to/d6rSgwRs?typeform-source=esteem-unusualacademy.carrd.co'">
+        Apply Now
+      </button>
+      <div class="programOverview">
+          <div
+            class="programOverviewBoxes"
+            v-for="(box, index) in boxes"
+            :key="index"
+          >
+            <h2>{{ box.title }}</h2>
+            <p class="keyHeading">{{ box.key }}</p>
+            <ul>
+              <li v-for="(point, idx) in box.points" :key="idx">{{ point }}</li>
+            </ul>
+          </div>
         </div>
-        </div>
+      </div>
+    </div>
+  
     `
 });
 
