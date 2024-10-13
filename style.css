@@ -7,6 +7,7 @@
 
 body{
   background-color: #FBF9F5;
+  /* add this margin since header pisition is fixed */
   margin-top: 100px;
 
 }
