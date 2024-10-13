@@ -273,8 +273,8 @@ Seminar 2 will take place in Silicon Valley during the winter/spring break.`
             <br>
             <ul>
                 <li v-for="(faq, index) in faqList" :key="index">
-                    <h3>{{ faq.question }}</h3>
-                    <p>{{ faq.answer }}</p>
+                    <h2>{{ faq.question }}</h2>
+                    <h3>{{ faq.answer }}</h3>
                     <br>
                 </li>
             </ul>
