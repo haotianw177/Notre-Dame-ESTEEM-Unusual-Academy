@@ -48,7 +48,8 @@ Vue.component('home', {
     <br><br>
 
     <h1>Program Overview</h1>
-    <p>The Unusual Academy consists of three workshops spaced throughout the academic year. Each workshop will focus on a specific aspect of building a successful startup, offering practical learning, mentorship, and team-based exercises. Participants will walk away with the skills necessary to identify customers, build products, and raise funds for their startups. </p>
+    <br>
+    <h2>The Unusual Academy consists of three workshops spaced throughout the academic year. Each workshop will focus on a specific aspect of building a successful startup, offering practical learning, mentorship, and team-based exercises. Participants will walk away with the skills necessary to identify customers, build products, and raise funds for their startups. </h2>
     <br>
 
     <div class="programOverview">

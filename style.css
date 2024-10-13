@@ -13,12 +13,15 @@
 }
 
 h1{
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-family: 'RecifeText', sans-serif;
 }
 
 h2{
   font-family: Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+
 }
 
 p{
