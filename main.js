@@ -139,15 +139,16 @@ Vue.component('applicationProcess', {
     <div class="applicationProcessContainer">
     <h1>Application Process</h1>
     <div class="applicationFormContainer">
-      <p>
+      <h2>
         Once applications are reviewed, selected teams will be invited for interviews. Final decisions will be made by November 8, 2024. The first workshop will commence on November 15, 2024, on the Notre Dame campus.
         For more information, please contact Germán Estrada, Assistant Teaching Professor & Director @ ESTEEM, at german.estrada@nd.edu.
         <br>
-        The Unusual Academy consists of three workshops spaced throughout the academic year. Each workshop will focus on a specific aspect of building a successful startup, offering practical learning, mentorship, and team-based exercises. Participants will walk away with the skills necessary to identify customers, build products, and raise funds for their startups.
-      </p>
+      </h2>
+      <br>
       <button class="applicationProcessButton" onclick="window.location.href='https://frmtb6m2df5.typeform.com/to/d6rSgwRs?typeform-source=esteem-unusualacademy.carrd.co'">
         Apply Now
       </button>
+      <br>
       <div class="programOverview">
           <div
             class="programOverviewBoxes"
