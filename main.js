@@ -37,7 +37,6 @@ Vue.component('home', {
   },
     template: `
     <div class="homeContainer">
-    <br>
     <h1>Notre Dame ESTEEM Unusual Academy</h1>
     <br>
     <h2>
