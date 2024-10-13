@@ -303,7 +303,7 @@ Vue.component('footerComponent', {
     template: `
       <footer class="footerContainer">
         <div class="footerContent">
-          <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+          <p>&copy; 2024 ESTEEM Unusual Academy. All rights reserved.</p>
           <nav class="footerNav">
             <a href="#" @click.prevent="navigate('home')">Home</a> |
             <a href="#" @click.prevent="navigate('applicationProcess')">Application Process</a> |

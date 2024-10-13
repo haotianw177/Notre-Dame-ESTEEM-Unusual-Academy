@@ -21,6 +21,11 @@ h2{
   font-family: Arial, sans-serif;
 }
 
+p{
+  font-family: Arial, sans-serif;
+
+}
+
 
 /* Navigation Bar Styles */
 .header {
@@ -87,6 +92,11 @@ h2{
   color: #666;
 }
 
+.sectionTitle{
+  margin-top: 2em;
+
+}
+
 /* Learning Facilitators Section */
 .learningFacilitators {
   display: flex;
@@ -105,7 +115,7 @@ h2{
 .learningFacilitators .secondaryBlock {
   flex: 1;
   background-color: white;
-  padding: 1em;
+  padding: 0em;
   box-sizing: border-box;
 }
 
@@ -149,7 +159,7 @@ h2{
   background-color: #f0f0f0;
   padding: 1em;
   flex: 1 1 calc(33.333% - 1em); /* Occupies one-third of the container */
-  margin: 0.5em;
+  /* margin: 0.5em; */
   box-sizing: border-box;
   text-align: center;
   text-align: left;
@@ -253,7 +263,7 @@ h2{
 /* Footer Styles */
 .footerComponent {
     background-color: #333;
-    color: #fff;
+    color: black;
     padding: 1em 0;
     position: relative;
     bottom: 0;
@@ -271,7 +281,7 @@ h2{
 }
 
 .footerNav a {
-    color: #fff;
+    color: black;
     text-decoration: none;
     margin: 0 0.5em;
 }
