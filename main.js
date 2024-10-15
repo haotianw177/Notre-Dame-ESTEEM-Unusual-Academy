@@ -2,14 +2,21 @@ Vue.component("headerComponent", {
   template: `
     <div class="header">
       <ul>
-        <li><a href="#" :class="{ active: $root.currentView === 'home' }" @click.prevent="$root.currentView = 'home'">Home</a></li>
-        <li><a href="#" :class="{ active: $root.currentView === 'applicationProcess' }" @click.prevent="$root.currentView = 'applicationProcess'">Process</a></li>
-        <li><a href="#" :class="{ active: $root.currentView === 'faqs' }" @click.prevent="$root.currentView = 'faqs'">FAQs</a></li>
+        <li><a href="#" :class="{ active: $root.currentView === 'home' }" @click.prevent="navigate('home')">Home</a></li>
+        <li><a href="#" :class="{ active: $root.currentView === 'applicationProcess' }" @click.prevent="navigate('applicationProcess')">Process</a></li>
+        <li><a href="#" :class="{ active: $root.currentView === 'faqs' }" @click.prevent="navigate('faqs')">FAQs</a></li>
         <li><button onclick="window.location.href='https://frmtb6m2df5.typeform.com/to/d6rSgwRs?typeform-source=esteem-unusualacademy.carrd.co'" class="applyButtonHeader">Apply</button></li>
       </ul>
     </div>
   `,
+  methods: {
+    navigate(view) {
+      this.$root.currentView = view;
+      window.scrollTo(0, 0); // Scroll to top of the page
+    },
+  },
 });
+
 
 Vue.component("home", {
   data() {
