@@ -1,3 +1,4 @@
+// haha
 Vue.component("headerComponent", {
   template: `
     <div class="header">
