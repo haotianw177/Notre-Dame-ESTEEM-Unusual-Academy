@@ -5,50 +5,43 @@
   box-sizing: border-box;
 }
 
-body{
-  background-color: #FBF9F5;
-  /* add this margin since header pisition is fixed */
-  margin-top: 100px;
-
+/* Body Styles */
+body {
+  background-color: #fbf9f5;
+  margin-top: 100px; /* Offset for fixed header */
 }
 
-
-
+/* Font Face */
 @font-face {
-  font-family: 'RecifeText';
-  src: url('fonts/RecifeText_Light.ttf') format('truetype');
+  font-family: "RecifeText";
+  src: url("fonts/RecifeText_Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
-h1{
+/* Global Typography Styles */
+h1 {
   font-size: 2.4rem;
-  font-family: 'RecifeText', sans-serif;
+  font-family: "RecifeText", sans-serif;
 }
 
-h2{
+h2 {
   font-family: Arial, sans-serif;
   font-size: 1.3rem;
   font-weight: 400;
 }
 
-h3{
+h3 {
   font-family: Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
 }
 
-p{
-  font-family: Arial, sans-serif;
-
-}
-
-li{
+p,
+li {
   font-family: Arial, sans-serif;
   font-weight: 400;
-
 }
-
 
 /* Navigation Bar Styles */
 .header {
@@ -56,16 +49,17 @@ li{
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #0D2240;
-  z-index: 1000; /* Ensure it stays above other elements */
+  background-color: #0d2240;
+  z-index: 1000;
   padding: 1em 0;
-  /* Retain other styles as needed */
+  height: 50px;
 }
 
 .header ul {
   list-style: none;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
+  margin-right: 2em;
 }
 
 .header li {
@@ -83,44 +77,80 @@ li{
   text-decoration: underline;
 }
 
+/* Apply Button in Header (If Used) */
 .applyButtonHeader {
-    background-color: #4CAF50; /* Green background */
-    border: none; /* Remove border */
-    color: white; /* White text */
-    border-radius: 10px;
-    width: 100px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  width: 100px;
 }
 
 .applyButtonHeader:hover {
-    background-color: white; /* White background on hover */
-    color: #4CAF50; /* Green text on hover */
+  background-color: white;
+  color: #4caf50;
 }
 
-.homeContainer{
+/* Main Content Styles */
+
+/* Home Page Container */
+.homeContainer {
   margin: 30px auto 50px auto;
   width: 70%;
 }
 
-/* Main Container Styles */
-.applicationProcessContainer {
-    text-align: left;
-    margin: 30px auto 50px auto;
-    width: 70%;
-  /* text-align: center; */
+.homeContainer p {
+  font-size: 1.2rem;
 }
 
-.applicationProcessContainer h1 {
-  /* font-size: 2.5em; */
+/* Introduction Section */
+.introText {
+  margin-bottom: 100px;
 }
 
-.applicationProcessContainer p {
-  font-size: 1.5em;
-  color: #666;
+/* Apply Now Button */
+.applyButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.sectionTitle{
-  margin-top: 2em;
+.applyButton:hover {
+  background-color: white;
+  color: #4caf50;
+}
 
+/* Program Overview Section */
+.programOverviewText{
+  margin-bottom: 50px;
+}
+
+.programOverview {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.programOverviewBoxes {
+  background-color: #f0f0f0;
+  padding: 1em;
+  flex: 1 1 calc(33.333% - 1em);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.programOverviewBoxes ul li {
+  margin-bottom: 0.5em;
+  list-style-type:disc;
+}
+
+.programOverviewBoxes .keyHeading {
+  font-size: 1em;
+  margin-bottom: 0.5em;
 }
 
 /* Learning Facilitators Section */
@@ -129,19 +159,17 @@ li{
   justify-content: space-between;
   align-items: flex-start;
   margin: 2em 0;
+  margin-bottom: 100px;
 }
 
 .learningFacilitators .mainBlock {
   flex: 2;
-  margin-right: 1em;
-  background-color: white;
+  margin-right: 5em;
   box-sizing: border-box;
 }
 
 .learningFacilitators .secondaryBlock {
   flex: 1;
-  background-color: white;
-  padding: 0em;
   box-sizing: border-box;
 }
 
@@ -149,12 +177,17 @@ li{
   margin-top: 0;
 }
 
+.facultyImage {
+  margin: 20px 0;
+  width: 100%;
+}
+
 .learningFacilitators p {
   font-size: 1em;
   color: #333;
 }
 
-/* Responsive Adjustments */
+/* Responsive Adjustments for Learning Facilitators */
 @media (max-width: 768px) {
   .learningFacilitators {
     flex-direction: column;
@@ -168,43 +201,96 @@ li{
   }
 }
 
-.facultyImage {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.whoShouldApply{
+  margin-bottom: 100px;
 }
 
-/* Styles for each block */
-.programOverview {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+.fundingOpportunity{
+  margin-bottom: 100px;
 }
 
-/* Styles for each block */
-.programOverviewBoxes {
-  background-color: #f0f0f0;
-  padding: 1em;
-  flex: 1 1 calc(33.333% - 1em); /* Occupies one-third of the container */
-  /* margin: 0.5em; */
-  box-sizing: border-box;
-  text-align: center;
+/* Application Process Page */
+.applicationProcessContainer {
+  margin: 30px auto 50px auto;
+  width: 70%;
   text-align: left;
-
+  margin-bottom: 100px;
 }
 
-.programOverviewBoxes ul li {
-  margin-bottom: 0.5em;
+.applicationProcessContainer p {
+  font-size: 1.2rem;
+  color: black;
+}
+
+.applicationProcessText {
+  margin-bottom: 100px; /* This adds space before the button */
+}
+
+
+/* FAQs Page */
+.faqsContainer {
+  margin: 30px auto 50px auto;
+  width: 70%;
+  text-align: left;
+}
+
+.faqsContainer p {
+  white-space: pre-wrap;
+}
+
+.faqsContainer li {
   list-style-type: none;
 }
 
-.programOverviewBoxes .keyHeading {
+/* Application Process Button */
+.applicationProcessButton {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
   font-size: 1em;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+.applicationProcessButton:hover {
+  background-color: #555;
+}
+
+/* Footer Styles */
+.footerContainer {
+  /* background-color: #333; */
+  /* color: white; */
+  /* padding: 1em 0; */
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.footerContent {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footerContent p {
+  color: black;
   margin-bottom: 0.5em;
 }
 
+.footerNav a {
+  color: black;
+  text-decoration: none;
+  margin: 0 0.5em;
+}
 
+.footerNav a:hover {
+  text-decoration: underline;
+}
 
-/* Responsive adjustments */
+/* Responsive Adjustments for Program Overview */
 @media (max-width: 768px) {
   .programOverview {
     flex-direction: column;
@@ -214,123 +300,4 @@ li{
   .programOverviewBoxes {
     flex: 1 1 100%;
   }
-}
-
-/* Styles for the info sections */
-.infoSection {
-  display: flex;
-  width: 100%;
-  margin: 2em 0;
-  white-space: pre-wrap;
-  
-
-}
-
-.infoSection .left {
-  width: 30%;
-  padding: 1em;
-  background-color: #f0f0f0;
-}
-
-.infoSection .right {
-  width: 70%;
-  padding: 1em;
-  background-color: #e0e0e0;
-}
-
-.infoSection h2 {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-.infoSection p {
-  font-size: 1em;
-  color: #333;
-}
-
-.applicationFormContainer{
-    text-align: left;
-    margin: 30px auto 50px auto;
-    width: 100%;
-}
-
-.applicationButton {
-    display: inline-block;
-    padding: 0.75em 1.5em;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1em;
-    border-radius: 4px;
-    text-align: center;
-    cursor: pointer;
-    align-items: center;
-  }
-  
-  .applicationButton:hover {
-    background-color: #555;
-  }
-
-  .applicationProcessButton {
-    display: inline-block;
-    padding: 0.75em 1.5em;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1em;
-    border-radius: 4px;
-    text-align: center;
-    cursor: pointer;
-    align-items: center;
-  }
-
-
-
-/* Footer Styles */
-.footerComponent {
-    background-color: #333;
-    color: black;
-    padding: 1em 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.footerContent {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 2em;
-
-}
-
-.footerComponent p {
-    margin-bottom: 0.5em;
-}
-
-.footerNav a {
-    color: black;
-    text-decoration: none;
-    margin: 0 0.5em;
-}
-
-.footerNav a:hover {
-    text-decoration: underline;
-}
-
-.faqsContainer{
-    text-align: left;
-    margin: 30px auto 50px auto;
-    width: 70%;
-
-}
-
-/* Add this to your existing CSS file */
-.faqsContainer p {
-    white-space: pre-wrap;
-}
-
-
-.faqsContainer li{
-    list-style-type: none
 }

@@ -3,28 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page with Vue.js</title>
+    <title>Notre Dame ESTEEM Unusual Academy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Vue App Mount Point -->
     <div id="app">
-        <!-- Navigation Bar -->
-        <div class="header">
-            <ul>
-                <li><a href="#" :class="{ active: currentView === 'home' }" @click.prevent="currentView = 'home'">Home</a></li>
-                <li><a href="#" :class="{ active: currentView === 'applicationProcess' }" @click.prevent="currentView = 'applicationProcess'">Process</a></li>
-                <li><a href="#" :class="{ active: currentView === 'faqs' }" @click.prevent="currentView = 'faqs'">FAQs</a></li>
-                <li><button onclick="window.location.href='https://frmtb6m2df5.typeform.com/to/d6rSgwRs?typeform-source=esteem-unusualacademy.carrd.co'" class="applyButtonHeader">Apply</button>
-                </li>
-            </ul>
-        </div>
+        <!-- Use the New Header Component -->
+        <header-component></header-component>
 
         <!-- Dynamic Component Rendering -->
         <component :is="currentView"></component>
-        <!-- Vue.js internally normalizes component names to make the mapping between JavaScript and HTML templates flexible and consistent -->
+        
+        <!-- Footer Component -->
         <footer-component></footer-component>
-
     </div>
 
     <!-- Include Vue.js from CDN -->
