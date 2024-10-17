@@ -2,13 +2,15 @@
 Vue.component("headerComponent", {
   template: `
     <div class="header">
-      <ul>
-        <li><a href="#" :class="{ active: $root.currentView === 'home' }" @click.prevent="navigate('home')">Home</a></li>
-        <li><a href="#" :class="{ active: $root.currentView === 'applicationProcess' }" @click.prevent="navigate('applicationProcess')">Process</a></li>
-        <li><a href="#" :class="{ active: $root.currentView === 'faqs' }" @click.prevent="navigate('faqs')">FAQs</a></li>
-        <li><button onclick="window.location.href='https://frmtb6m2df5.typeform.com/to/d6rSgwRs?typeform-source=esteem-unusualacademy.carrd.co'" class="applyButtonHeader">Apply</button></li>
-      </ul>
+    <img src="/images/logo.svg.png" alt="Logo" class="logo">
+    <ul class="nav-links">
+      <li><a href="#" :class="{ active: $root.currentView === 'home' }" @click.prevent="navigate('home')">Home</a></li>
+      <li><a href="#" :class="{ active: $root.currentView === 'applicationProcess' }" @click.prevent="navigate('applicationProcess')">Process</a></li>
+      <li><a href="#" :class="{ active: $root.currentView === 'faqs' }" @click.prevent="navigate('faqs')">FAQs</a></li>
+    </ul>
+    <button onclick="window.location.href='https://your-apply-link.com'" class="applyButtonHeader">Apply to EUA</button>
     </div>
+
   `,
   methods: {
     navigate(view) {
@@ -56,6 +58,7 @@ Vue.component("home", {
   },
   template: `
   <div class="homeContainer">
+
     <div class="introText">
     <h1>Notre Dame ESTEEM Unusual Academy</h1>
     <br>
@@ -64,8 +67,9 @@ Vue.component("home", {
     </p>
     </div>
 
-    <button class="applyButton" >Apply Now</button>
-    <br><br>
+    <div class="flyer"><img src = "images/flyer.png">
+    <button class="applyButton" >Apply Now</button></div>
+
 
     <div class="programOverviewText">
     <h1>Program Overview</h1>
@@ -95,7 +99,6 @@ Vue.component("home", {
         <img src= "images/john.jpg" class="facultyImage" width = "100%">
         <p>John Vrionis is a Co-Founder and Partner at Unusual Ventures. A venture capitalist since 2006, he’s been an early investor in over a dozen billion dollar plus companies, including: Affirmed Networks, AppDynamics, Arctic Wolf Networks, Carta, Harness, Liftoff.io, Mulesoft, Nicira, Nimble Storage, Sourcegraph, and DataStax. Originally from Georgia, John attended Harvard where he studied economics, applied math and played soccer. His drive to learn pushed him to earn his master’s degree in computer science from the University of Chicago. Inspired by successful entrepreneurs, John arrived in Silicon Valley in 2002 and worked in product management before completing his MBA at Stanford. John looks to work with entrepreneurs who have the hunger to learn and the drive to overcome difficult obstacles. In John’s words, “I believe that you learn by overcoming adversity. For me, whether it was sports, school, or in my personal and professional life, that’s been the truth. I gravitate to people who have an immense drive and the humility to keep learning.” Prior to founding Unusual Ventures, John was a General Partner at Lightspeed Venture Partners.
         <br><br>Portfolio of investments include: Hallow, Snapchat, Pinterest, MongoDB
-
         </p>
       
       </div>

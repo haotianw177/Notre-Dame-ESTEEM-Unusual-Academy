@@ -1,1 +1,4 @@
-Website made for University of Notre Dame, ESTEEM Unusual Academy
+### ESTEEM Unusual Academy at University of Notre Dame
+
+website made in [Vue.js](https://vuejs.org/).
+

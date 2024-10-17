@@ -8,7 +8,8 @@
 /* Body Styles */
 body {
   background-color: #fbf9f5;
-  margin-top: 100px; /* Offset for fixed header */
+  padding-top: 70px; /* Add padding to compensate for the fixed header */
+  overflow-x: hidden;
 }
 
 /* Font Face */
@@ -45,51 +46,89 @@ li {
 
 /* Navigation Bar Styles */
 .header {
-  position: fixed;
+  display: flex;
+  align-items: center; /* Ensures all items are aligned vertically */
+  justify-content: space-between; /* Space between the logo and the nav items */
+  background-color: #0d2240;
+  padding: 1em 2em;
+  height: 70px; /* Adjust the height to make the header taller */
+  position: fixed; /* Fix the header to the top */
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #0d2240;
-  z-index: 1000;
-  padding: 1em 0;
-  height: 50px;
+  z-index: 1000; /* Ensure the header stays above other content */
 }
 
-.header ul {
-  list-style: none;
+.logo {
+  height: 50px; /* Adjust based on your logo size */
+  margin-right: 2em; /* Adjust to align with the right button */
+}
+
+.nav-links {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 2em;
+  list-style: none;
+  margin-left: auto; 
+  padding: 0;
+  font-size: 0.9rem; /* Smaller font size for the links */
+  gap: 1.5em; /* Space between each link */
+  margin-right: 1.5em; /* Move the nav-links closer to the button */
 }
 
-.header li {
-  margin: 0 1.5em;
-}
-
-.header a {
+.nav-links a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
-.header a:hover,
-.header a.active {
+.nav-links a.active,
+.nav-links a:hover {
   text-decoration: underline;
 }
 
-/* Apply Button in Header (If Used) */
 .applyButtonHeader {
-  background-color: #4caf50;
+  background-color: #FECE36; /* Dark red background color */
+  color: black;
+  padding: 10px 30px; /* Make the button bigger */
   border: none;
-  color: white;
-  border-radius: 10px;
-  width: 100px;
+  border-radius: 20px; /* Rounded edges */
+  font-size: 1.1rem; /* Increase the font size */
+  cursor: pointer;
 }
 
 .applyButtonHeader:hover {
-  background-color: white;
-  color: #4caf50;
+  background-color: white; 
+  color: #FECE36; 
 }
+
+/* Ensuring all elements align at the same height */
+.header img,
+.header .nav-links a,
+.header .applyButtonHeader {
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0.5em 1em; /* Reduce padding for mobile */
+  }
+
+  .logo {
+    height: 30px; /* Smaller logo on mobile */
+    margin-right: 1em; /* Adjust margin to keep it compact */
+  }
+
+  .nav-links {
+    gap: 1em; /* Reduce space between links */
+    font-size: 0.8rem; /* Smaller font for mobile view */
+  }
+
+  .applyButtonHeader {
+    padding: 8px 20px; /* Reduce button size on mobile */
+    font-size: 0.9rem; /* Smaller font for the button */
+    margin-left: 1em; /* Adjust the margin */
+  }
+}
+
 
 /* Main Content Styles */
 
@@ -108,20 +147,56 @@ li {
   margin-bottom: 100px;
 }
 
-/* Apply Now Button */
-.applyButton {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.flyer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
-.applyButton:hover {
-  background-color: white;
-  color: #4caf50;
+.flyer img {
+  max-width: 60%;
 }
+
+.flyer .applyButton {
+  background-color: #FECE36;
+  /* color: white; */
+  padding: 10px 80px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  align-self: center; /* Center the button vertically */
+}
+
+.flyer .applyButton:hover {
+  background-color: #0d2240; 
+  color: white; 
+}
+
+/* Responsive adjustments for mobile view */
+@media (max-width: 768px) {
+  .flyer {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .flyer img {
+    max-width: 100%; /* Make the image take the full width of the container */
+    height: auto;
+  }
+
+  .flyer .applyButton {
+    width: 100%;
+    margin-top: 120px; /* Add space between the image and button */
+  }
+
+  /* .applicationProcessButton{
+    align-items: left;
+  } */
+}
+
 
 /* Program Overview Section */
 .programOverviewText{
@@ -223,7 +298,7 @@ li {
 }
 
 .applicationProcessText {
-  margin-bottom: 100px; /* This adds space before the button */
+  margin-bottom: 50px; /* This adds space before the button */
 }
 
 
@@ -244,20 +319,19 @@ li {
 
 /* Application Process Button */
 .applicationProcessButton {
-  display: inline-block;
-  padding: 0.75em 1.5em;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  font-size: 1em;
-  border-radius: 4px;
-  text-align: center;
+  margin: 0 auto 50px; /* Center the button with margin auto */
+  background-color: #FECE36; /* Yellow background */
+  color: #0d2240; /* Dark blue text */
+  padding: 10px 80px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
-  margin-bottom: 1em;
+  display: block; /* Ensure the button takes up full width available and can be centered */
 }
 
 .applicationProcessButton:hover {
-  background-color: #555;
+  background-color: #0d2240; 
+  color: white; 
 }
 
 /* Footer Styles */
