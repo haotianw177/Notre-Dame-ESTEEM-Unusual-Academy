@@ -8,7 +8,7 @@ Vue.component("headerComponent", {
       <li><a href="#" :class="{ active: $root.currentView === 'applicationProcess' }" @click.prevent="navigate('applicationProcess')">Process</a></li>
       <li><a href="#" :class="{ active: $root.currentView === 'faqs' }" @click.prevent="navigate('faqs')">FAQs</a></li>
     </ul>
-    <button onclick="window.location.href='https://your-apply-link.com'" class="applyButtonHeader">Apply to EUA</button>
+    <button onclick="window.location.href='https://frmtb6m2df5.typeform.com/to/d6rSgwRs?typeform-source=esteem-unusualacademy.carrd.co'" class="applyButtonHeader">Apply to EUA</button>
     </div>
 
   `,
@@ -68,7 +68,7 @@ Vue.component("home", {
     </div>
 
     <div class="flyer"><img src = "images/flyer.png">
-    <button class="applyButton" >Apply Now</button></div>
+    <button class="applyButton" onclick="window.location.href='https://frmtb6m2df5.typeform.com/to/d6rSgwRs?typeform-source=esteem-unusualacademy.carrd.co'">Apply Now</button></div>
 
 
     <div class="programOverviewText">

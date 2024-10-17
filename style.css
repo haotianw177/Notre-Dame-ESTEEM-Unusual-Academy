@@ -88,7 +88,7 @@ li {
 .applyButtonHeader {
   background-color: #FECE36; /* Dark red background color */
   color: black;
-  padding: 10px 30px; /* Make the button bigger */
+  padding: 5px 30px; /* Make the button bigger */
   border: none;
   border-radius: 20px; /* Rounded edges */
   font-size: 1.1rem; /* Increase the font size */
@@ -164,7 +164,7 @@ li {
   /* color: white; */
   padding: 10px 80px;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   align-self: center; /* Center the button vertically */
 }
@@ -324,7 +324,7 @@ li {
   color: #0d2240; /* Dark blue text */
   padding: 10px 80px;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   display: block; /* Ensure the button takes up full width available and can be centered */
 }
